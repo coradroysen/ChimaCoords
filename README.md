@@ -1,0 +1,2 @@
+# ChimaCoords
+Simple GPS Addon
