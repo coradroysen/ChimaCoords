@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: ChimaCoords
+## Version: 1.0
+## Notes: Simple GPS
+## Author: Chimaya
+
+ChimaCoords.lua
+ChimaCoords.xml
