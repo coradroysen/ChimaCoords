@@ -9,10 +9,12 @@ local function UpdateCoordinates(self, elapsed)
 
     local instanceID = select(8, GetInstanceInfo())
 
+
     if instanceID == 0 or instanceID == 1 then
       if zone ~= GetRealZoneText() then
-          zone = GetRealZoneText()
-          SetMapToCurrentZone()
+        local mapID = C_Map.GetBestMapForUnit("player")
+        WorldMapFrame:SetMapID(mapID)
+        zone = GetRealZoneText()
       end
 
       local map = C_Map.GetBestMapForUnit("player");
