@@ -1,7 +1,7 @@
 local zone = nil
 local TimeSinceLastUpdate = 0
 
-local function UpdateCoordinates(self, elapsed)
+local function ChimaCoords_UpdateCoordinates(self, elapsed)
   TimeSinceLastUpdate = TimeSinceLastUpdate + elapsed
 
   if TimeSinceLastUpdate > .05 then
@@ -50,7 +50,7 @@ function ChimaCoords_OnEvent(self, event, ...)
    if event == "ADDON_LOADED" and ... == "ChimaCoords" then
       self:UnregisterEvent("ADDON_LOADED")
 
-  	  coordsFrame:SetScript("OnUpdate", UpdateCoordinates)
+  	  coordsFrame:SetScript("OnUpdate", ChimaCoords_UpdateCoordinates)
 
       Minimap:CreateFontString("coordsTextMM", "ARTWORK", nil)
       coordsTextMM:SetPoint("BOTTOM", "Minimap", "BOTTOM", 1, 12)
